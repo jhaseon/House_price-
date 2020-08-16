@@ -17,6 +17,8 @@ def predict():
 
     output = round(prediction[0], 2)
     print(output)
+    import time 
+    time.sleep(3)
     return render_template('index.html', prediction_text='House Price should be $ {}'.format(output))
 
 if __name__ == "__main__":

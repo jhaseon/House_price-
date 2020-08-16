@@ -13,20 +13,18 @@
 
 <body style="background: #000;">
  <div class="login">
-	<h1>Sales Forecasting</h1>
+	<h1>Predict Ames House Price</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
       <input type="text" name="Living Area" placeholder="Living Area" required="required" />
-      <input type="text" name="Garage Area" placeholder="Garage Area" required="required" />
+      <input type="text" name="Garage Size" placeholder="Garage Size" required="required" />
       <input type="text" name="Full Bath" placeholder="Full Bath" required="required" />
       <input type="text" name="Year Built" placeholder="Year Built" required="required" /> 
       <input type="text" name="Fireplaces" placeholder="Fireplaces" required="required" />
 
       <button type="submit" class="btn btn-primary btn-block btn-large">Predict House Price</button>
     </form>
-
-   <br>
    <br>
    {{ prediction_text }}
 
