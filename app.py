@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('house_trained_model.pkl', 'rb'))
+model = pickle.load(open('house_trained_model_zillow.pkl', 'rb'))
 
 @app.route('/')
 def home():
@@ -17,7 +17,7 @@ def predict():
 
     output = round(prediction[0], 2)
     print(output)
-    return render_template('index.html', prediction_text='Sales should be $ {}'.format(output))
+    return render_template('index.html', prediction_text='House Price should be $ {}'.format(output))
 
 if __name__ == "__main__":
     app.run(debug=True)

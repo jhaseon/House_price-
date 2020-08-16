@@ -17,13 +17,13 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-      <input type="text" name="rate" placeholder="rate" required="required" />
-      <input type="text" name="sales in first month" placeholder="sales in first month" required="required" />
-      <input type="text" name="sales in second month" placeholder="sales in second month" required="required" />
-      <input type="text" name="sales in 3rd month" placeholder="sales in 3rd month" required="required" /> 
-      <input type="text" name="sales in 4rd month" placeholder="sales in 4rd month" required="required" />
+      <input type="text" name="Living Area" placeholder="Living Area" required="required" />
+      <input type="text" name="Garage Area" placeholder="Garage Area" required="required" />
+      <input type="text" name="Full Bath" placeholder="Full Bath" required="required" />
+      <input type="text" name="Year Built" placeholder="Year Built" required="required" /> 
+      <input type="text" name="Fireplaces" placeholder="Fireplaces" required="required" />
 
-      <button type="submit" class="btn btn-primary btn-block btn-large">Predict sales in third month</button>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict House Price</button>
     </form>
 
    <br>
